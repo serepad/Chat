@@ -35,4 +35,8 @@ public class MyServer {
             }
         }
     }
+    public void remove(ClientHandler o){ // Метод, отвещающий за удаление обработчика из списка клиентов
+        clients.remove(o);
+    }
+
 }
