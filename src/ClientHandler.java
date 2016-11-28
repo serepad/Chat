@@ -32,6 +32,6 @@ public class ClientHandler implements Runnable {
 
     @Override
     public void run() {
-
+        String t = SQLHandler.getNickByLoginPassword(n[1], n[2]);
     }
 }
