@@ -38,5 +38,9 @@ public class MyServer {
     public void remove(ClientHandler o){ // Метод, отвещающий за удаление обработчика из списка клиентов
         clients.remove(o);
     }
-
+    public void broadCastMsg(String msg) { // Метод, рассылающий всем клиентам сообщение
+        for (ClientHandler o : clients) {  // “Бежим” по списку клиентов
+            o.sendMsg(msg);          // и каждому пишем сообщение msg
+        }
+    }
 }
